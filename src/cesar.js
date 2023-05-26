@@ -1,4 +1,4 @@
-const alfabeto = require("./util/alfabeto");
+const { alfabeto } = require("./util/alfabetos");
 
 const cifrarCesar = (mensaje, desplazamiento) => {
   let resultado = "";
@@ -25,7 +25,7 @@ const cifrarCesar = (mensaje, desplazamiento) => {
 };
 
 function descifrarCesar(mensajeCifrado, desplazamiento) {
-  let resultado = '';
+  let resultado = "";
 
   for (let i = 0; i < mensajeCifrado.length; i++) {
     let caracter = mensajeCifrado[i].toLowerCase();
@@ -52,7 +52,6 @@ function descifrarCesar(mensajeCifrado, desplazamiento) {
 
   return resultado;
 }
-
 
 const msgCifrado = cifrarCesar("Esta es una prueba con ñ", 8);
 const msgDescifrado = descifrarCesar(msgCifrado, 8);
